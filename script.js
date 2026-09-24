@@ -21,7 +21,7 @@ const EN = {
   'f.filtrai': 'Filters in a ship compartment', 'f.izoliuoti': 'Insulated pipes and valves',
   'f.transportas': 'Piping module ready for transport to site', 'f.pizoliuoti': 'Insulated piping at an industrial site',
   'f.pvamzdynai': 'Piping in a steel frame', 'f.modulis': 'Large pipe module next to the building',
-  'kur.h2': 'Where we have worked',
+  'kur.h2': 'Where we work',
   'salis.lt': 'Lithuania', 'salis.se': 'Sweden', 'salis.no': 'Norway', 'salis.fi': 'Finland',
   'kur.objektai': 'Sites', 'kur.objektai.v': 'Shipbuilding and industrial sites',
   'kur.partneris': 'Partner and client', 'kur.nuo': 'In business since', 'kur.nuo.v': 'April 2022, Klaipėda',
