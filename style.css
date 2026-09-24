@@ -1,0 +1,389 @@
+/* UAB „Leostat“ svetainė. Spalvos ir šriftai pagal context/stilius.md */
+:root {
+  --juoda: #1a1a1a;
+  --juoda-2: #242424;
+  --auksine: #d4af37;          /* tik ant juodos */
+  --auksine-tamsi: #7a5f18;    /* auksinė ant balto */
+  --geltona: #f5c518;          /* mygtukai, brūkšniai; tekstas ant jos juodas */
+  --balta: #ffffff;
+  --smelis: #faf8f3;
+  --linija: #e3ddd0;
+  --tekstas-2: #4a4a4a;
+  --tekstas-tamsoje: #cfcac0;
+
+  --antrastes: Georgia, "Times New Roman", serif;
+  --tekstas: Calibri, Carlito, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --plotis: 1240px;
+  --tarpas: clamp(1rem, 4vw, 2.5rem);
+  --juosta-h: 72px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--juosta-h); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--balta);
+  color: var(--juoda);
+  font-family: var(--tekstas);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+img, video { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { font-family: var(--antrastes); font-weight: 700; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 3px solid var(--geltona); outline-offset: 3px; }
+
+.remas { max-width: var(--plotis); margin: 0 auto; padding: 0 var(--tarpas); }
+.sekcija { padding: clamp(4rem, 9vw, 7rem) 0; }
+.sekcija h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+  padding-bottom: .6rem;
+  border-bottom: 2px solid var(--auksine-tamsi);
+  display: inline-block;
+}
+.ivadas { margin-top: 1.25rem; max-width: 60ch; color: var(--tekstas-2); font-size: 1.2rem; }
+
+/* ---------- Juosta ---------- */
+.juosta {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--juoda);
+  border-bottom: 4px solid var(--auksine);
+}
+.juosta__vidus {
+  max-width: var(--plotis); margin: 0 auto; padding: 0 var(--tarpas);
+  height: var(--juosta-h);
+  display: flex; align-items: center; gap: 1rem;
+}
+.juosta__logo img { height: 52px; width: auto; }
+.juosta__linija { width: 1px; height: 34px; background: var(--auksine); }
+.juosta__veikla { color: #a8a39a; font-size: .95rem; white-space: nowrap; }
+.meniu { margin-left: auto; display: flex; gap: 1.75rem; }
+.meniu a {
+  color: var(--balta); text-decoration: none; font-size: 1rem; white-space: nowrap;
+  padding: .35rem 0; border-bottom: 2px solid transparent;
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+}
+.meniu a:hover { color: var(--auksine); border-color: var(--auksine); }
+.kalba { display: flex; border: 1px solid #5a5548; }
+.kalba button {
+  background: none; border: 0; color: #a8a39a; font: 700 .85rem var(--tekstas);
+  padding: .35rem .6rem; cursor: pointer;
+}
+.kalba button[aria-pressed="true"] { background: var(--auksine); color: var(--juoda); }
+.meniu-mygtukas { display: none; }
+
+/* ---------- Mygtukai ---------- */
+.mygtukai { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
+.mygt {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 1.6rem;
+  font: 700 1.05rem var(--tekstas); letter-spacing: .01em;
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .2s var(--ease), background-color .25s var(--ease), color .25s var(--ease);
+}
+.mygt:active { transform: translateY(1px) scale(.98); }
+.mygt--geltonas { background: var(--geltona); color: var(--juoda); }
+.mygt--geltonas:hover { background: #ffd43b; }
+.mygt--konturas { border-color: var(--auksine); color: var(--auksine); background: transparent; }
+.mygt--konturas:hover { background: var(--auksine); color: var(--juoda); }
+.mygt--juodas { background: var(--juoda); color: var(--auksine); }
+.mygt--juodas:hover { background: #000; }
+
+/* ---------- Pirmas ekranas ---------- */
+.herojus {
+  background: var(--juoda); color: var(--balta);
+  display: grid; grid-template-columns: 1.05fr 1fr;
+  min-height: calc(100dvh - var(--juosta-h) - 4px);
+  max-height: 860px;
+}
+.herojus__tekstas {
+  align-self: center;
+  padding: clamp(2.5rem, 6vw, 5rem) var(--tarpas) clamp(2.5rem, 6vw, 5rem) max(var(--tarpas), calc((100vw - var(--plotis)) / 2 + var(--tarpas)));
+}
+.herojus h1 { font-size: clamp(2.1rem, 3.4vw, 2.75rem); max-width: 22ch; letter-spacing: -.01em; }
+.herojus p { margin-top: 1.4rem; font-size: 1.25rem; color: var(--tekstas-tamsoje); max-width: 40ch; }
+.herojus__foto { margin: 0; position: relative; overflow: hidden; }
+.herojus__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.herojus__foto::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--juoda) 0%, rgba(26,26,26,0) 22%);
+  pointer-events: none;
+}
+
+/* ---------- Paslaugos ---------- */
+.pasl-tinklas {
+  margin-top: 3rem;
+  display: grid; gap: 1.25rem;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: auto auto;
+}
+.pasl { padding: 2rem; }
+.pasl h3 { font-size: 1.5rem; }
+.pasl ul { list-style: none; padding: 0; margin: 1.1rem 0 0; }
+.pasl li { padding: .55rem 0; font-size: 1.15rem; }
+.pasl li + li { border-top: 1px solid var(--linija); }
+.pasl--didelis {
+  grid-row: span 2; padding: 0; background: var(--smelis);
+  display: grid; grid-template-rows: auto 1fr;
+}
+.pasl__video { width: 100%; height: auto; aspect-ratio: 720 / 574; object-fit: cover; background: var(--juoda); }
+.pasl__tekstas { padding: 2rem; border-top: 4px solid var(--geltona); }
+.pasl--tamsus { background: var(--juoda); color: var(--balta); }
+.pasl--tamsus h3 { color: var(--auksine); }
+.pasl--tamsus li + li { border-color: #3a3a3a; }
+.pasl--smelis { background: var(--smelis); border-left: 4px solid var(--geltona); }
+
+/* ---------- Darbai ---------- */
+.darbai { background: var(--smelis); }
+.skirtukai { display: flex; gap: .5rem; margin-top: 2.25rem; flex-wrap: wrap; }
+.skirtukai button {
+  font: 700 1.05rem var(--tekstas); cursor: pointer;
+  padding: .7rem 1.25rem; min-height: 48px;
+  background: var(--balta); color: var(--juoda); border: 1px solid var(--linija);
+  transition: background-color .25s var(--ease);
+}
+.skirtukai button:hover { border-color: var(--juoda); }
+.skirtukai button[aria-selected="true"] { background: var(--juoda); color: var(--auksine); border-color: var(--juoda); }
+.galerija {
+  margin-top: 1.75rem;
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  grid-auto-flow: dense;
+}
+.galerija[hidden] { display: none; }
+.g { margin: 0; position: relative; display: flex; flex-direction: column; min-height: 0; }
+.g--platus { grid-column: span 2; grid-row: span 2; }
+.g--aukstas { grid-row: span 2; }
+.g__btn { flex: 1; min-height: 0; padding: 0; border: 0; background: var(--juoda); cursor: zoom-in; overflow: hidden; display: block; width: 100%; }
+.g__btn img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease), opacity .3s; }
+.g__btn:hover img { transform: scale(1.04); }
+.g figcaption { font-size: .98rem; color: var(--tekstas-2); padding-top: .5rem; }
+.galerija.keiciasi .g { animation: iskyla .5s var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
+
+/* ---------- Kur dirbome ---------- */
+.salys {
+  list-style: none; padding: 0; margin: 3rem 0 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid var(--juoda);
+}
+.salys li {
+  font-family: var(--antrastes); font-weight: 700;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  padding: 1.5rem 1rem 1.5rem 0;
+}
+.salys li + li { padding-left: 1.25rem; border-left: 1px solid var(--linija); }
+.kur__apacia {
+  margin-top: 2.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;
+}
+.faktai { margin: 0; display: grid; gap: 1.2rem; }
+.faktai dt { font-size: .95rem; color: var(--auksine-tamsi); font-weight: 700; }
+.faktai dd { margin: .15rem 0 0; font-size: 1.2rem; }
+.pastaba {
+  background: var(--smelis); border-left: 4px solid var(--geltona);
+  padding: 1.5rem 1.75rem; font-size: 1.25rem; line-height: 1.5;
+}
+
+/* ---------- Apie ---------- */
+.apie { background: var(--juoda); color: var(--balta); }
+.apie h2 { color: var(--balta); border-color: var(--auksine); }
+.apie__tinklas { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.apie__foto { margin: 0; border-bottom: 4px solid var(--auksine); }
+.apie__foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.apie__tekstas p { margin-top: 1.25rem; font-size: 1.2rem; color: var(--tekstas-tamsoje); max-width: 58ch; }
+.apie__tekstas p:first-of-type { margin-top: 1.75rem; color: var(--balta); font-size: 1.35rem; }
+.apie__tinklas--be-foto { grid-template-columns: 1fr; }
+.apie__tinklas--be-foto .apie__tekstas { display: grid; grid-template-columns: 5fr 7fr; gap: 1.5rem clamp(2rem, 6vw, 5rem); align-items: start; }
+.apie__tinklas--be-foto h2 { grid-column: 1 / -1; justify-self: start; }
+.apie__tinklas--be-foto p:first-of-type { grid-row: 2 / span 2; margin-top: 0; font-family: var(--antrastes); font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.35; border-left: 4px solid var(--auksine); padding-left: 1.5rem; }
+.apie__tinklas--be-foto p { margin-top: 0; }
+.apie--vadovas { padding-top: 0; }
+.apie--vadovas .apie__foto img { object-position: 50% 30%; }
+
+/* ---------- Darbas pas mus ---------- */
+.roles {
+  margin-top: 3rem;
+  display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 0;
+  border-top: 2px solid var(--juoda);
+}
+.role { padding: 1.75rem 1.75rem 1.75rem 0; }
+.role + .role { padding-left: 1.75rem; border-left: 1px solid var(--linija); }
+.role h3 { font-size: 1.4rem; }
+.role ul { margin: 1rem 0 0; padding-left: 1.1rem; }
+.role li { margin-top: .45rem; }
+.role li::marker { color: var(--auksine-tamsi); }
+
+.darbas__apacia {
+  margin-top: 3.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start;
+}
+.siulome h3, .forma h3 { font-size: 1.6rem; }
+.siulome__sarasas { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.siulome__sarasas li { background: var(--smelis); padding: 1.1rem 1.2rem; border-top: 3px solid var(--geltona); }
+.siulome__sarasas li:last-child { grid-column: span 2; }
+.siulome__sarasas li:first-child { grid-column: span 2; background: var(--juoda); color: var(--balta); border-top-color: var(--auksine); display: flex; gap: 1.25rem; align-items: center; }
+.siulome__sarasas li:first-child strong { font-family: var(--antrastes); font-size: 2.6rem; color: var(--auksine); white-space: nowrap; line-height: 1; }
+
+/* ---------- Formos ---------- */
+.forma { display: grid; gap: 1.1rem; }
+.forma--sviesi { background: var(--smelis); padding: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--linija); }
+.forma__eile { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.laukas { display: grid; gap: .4rem; }
+.laukas label { font-weight: 700; font-size: 1rem; }
+.laukas input, .laukas select, .laukas textarea {
+  font: 1.05rem var(--tekstas); color: var(--juoda);
+  background: var(--balta); border: 1px solid #8a8478;
+  padding: .75rem .85rem; min-height: 48px; width: 100%; border-radius: 0;
+}
+.laukas textarea { resize: vertical; }
+.laukas input:focus, .laukas select:focus, .laukas textarea:focus { outline: 3px solid var(--geltona); outline-offset: 0; border-color: var(--juoda); }
+.pagalba { font-size: .95rem; color: var(--tekstas-2); }
+.klaida { font-size: .95rem; color: #a3161a; font-weight: 700; }
+.klaida:empty { display: none; }
+.laukas.blogai input, .laukas.blogai select, .laukas.blogai textarea { border-color: #a3161a; border-width: 2px; }
+.forma .mygt { justify-self: start; }
+.forma__busena { font-size: 1rem; }
+.forma__busena:empty { display: none; }
+.forma--sviesi .forma__busena { background: var(--balta); border-left: 4px solid var(--geltona); padding: .8rem 1rem; }
+
+.forma--tamsi label { color: var(--balta); }
+.forma--tamsi .pagalba { color: #b9b4aa; }
+.forma--tamsi .klaida { color: #ff8a80; }
+.forma--tamsi .laukas.blogai input, .forma--tamsi .laukas.blogai textarea { border-color: #ff8a80; }
+.forma--tamsi input, .forma--tamsi textarea { background: #2a2a2a; color: var(--balta); border-color: #6b665c; }
+.forma--tamsi .forma__busena { color: var(--balta); border-left: 4px solid var(--auksine); padding: .8rem 1rem; background: #262626; }
+
+/* ---------- Kontaktai ---------- */
+.kontaktai {
+  background: #111; color: var(--balta);
+  display: grid; grid-template-columns: 1fr 1.3fr;
+  border-top: 4px solid var(--auksine);
+}
+.kontaktai__vaizdas { position: relative; overflow: hidden; background: #0b0b0b; min-height: 420px; }
+.kontaktai__vaizdas video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kontaktai__turinys { padding: clamp(3rem, 7vw, 5.5rem) var(--tarpas); max-width: 720px; }
+.kontaktai h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); color: var(--auksine); }
+.kontaktai__ivadas { margin: 1rem 0 2rem; color: var(--tekstas-tamsoje); font-size: 1.2rem; }
+.kontaktai__kiti { margin-top: 2.25rem; padding-top: 1.5rem; border-top: 1px solid #3a3a3a; display: flex; flex-wrap: wrap; gap: .75rem 2rem; }
+.kontaktai__kiti a { color: var(--auksine); font-weight: 700; text-underline-offset: 4px; }
+
+/* ---------- Poraštė ---------- */
+.apacia {
+  background: var(--juoda); color: #a8a39a; font-size: .95rem;
+  padding: 1.5rem var(--tarpas);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem;
+  border-top: 1px solid #333;
+}
+.apacia a { color: var(--auksine); }
+
+/* ---------- Peržiūra ---------- */
+.perziura { border: 0; padding: 0; background: transparent; max-width: min(92vw, 1400px); max-height: 92vh; }
+.perziura::backdrop { background: rgba(10,10,10,.92); }
+.perziura img { max-height: 80vh; width: auto; margin: 0 auto; }
+.perziura__aprasas { color: var(--balta); text-align: center; margin-top: .75rem; }
+.perziura__uzdaryti {
+  display: block; margin: 0 0 .75rem auto;
+  font: 700 1rem var(--tekstas); background: var(--auksine); color: var(--juoda);
+  border: 0; padding: .6rem 1.1rem; min-height: 44px; cursor: pointer;
+}
+
+/* ---------- Judesys ---------- */
+@keyframes iskyla { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .js .rodyti { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .rodyti.matomas { opacity: 1; transform: none; }
+  .herojus__tekstas > * { animation: iskyla .9s var(--ease) both; }
+  .herojus__tekstas > :nth-child(2) { animation-delay: .12s; }
+  .herojus__tekstas > :nth-child(3) { animation-delay: .24s; }
+  .herojus__foto img { animation: priartink 1.6s var(--ease) both; }
+}
+@keyframes priartink { from { transform: scale(1.08); opacity: .4; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .galerija.keiciasi .g { animation: none; }
+  .g__btn img { transition: none; }
+}
+
+/* ---------- Planšetė ---------- */
+@media (max-width: 1100px) {
+  .juosta__veikla, .juosta__linija { display: none; }
+  .meniu { gap: 1.1rem; }
+}
+
+/* ---------- Telefonas ---------- */
+@media (max-width: 860px) {
+  :root { --juosta-h: 64px; }
+  body { font-size: 1.0625rem; }
+  .juosta__logo img { height: 44px; }
+  .kalba { margin-left: auto; }
+  .meniu-mygtukas {
+    display: grid; place-items: center; width: 48px; height: 48px;
+    background: none; border: 1px solid #5a5548; cursor: pointer;
+  }
+  .meniu-mygtukas__bruksnys, .meniu-mygtukas__bruksnys::before, .meniu-mygtukas__bruksnys::after {
+    display: block; width: 20px; height: 2px; background: var(--auksine); position: relative; transition: transform .25s var(--ease);
+  }
+  .meniu-mygtukas__bruksnys::before, .meniu-mygtukas__bruksnys::after { content: ""; position: absolute; left: 0; }
+  .meniu-mygtukas__bruksnys::before { top: -6px; }
+  .meniu-mygtukas__bruksnys::after { top: 6px; }
+  .meniu-mygtukas[aria-expanded="true"] .meniu-mygtukas__bruksnys { background: transparent; }
+  .meniu-mygtukas[aria-expanded="true"] .meniu-mygtukas__bruksnys::before { transform: translateY(6px) rotate(45deg); }
+  .meniu-mygtukas[aria-expanded="true"] .meniu-mygtukas__bruksnys::after { transform: translateY(-6px) rotate(-45deg); }
+  .meniu {
+    position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+    flex-direction: column; gap: 0; background: var(--juoda);
+    border-bottom: 4px solid var(--auksine); padding: .5rem var(--tarpas) 1rem;
+    display: none;
+  }
+  .meniu.atidarytas { display: flex; }
+  .meniu a { padding: .9rem 0; font-size: 1.15rem; border-bottom: 1px solid #333; }
+
+  .herojus { grid-template-columns: 1fr; max-height: none; min-height: 0; }
+  .herojus__foto { order: -1; height: 42vh; min-height: 260px; }
+  .herojus__foto img { object-position: 50% 12%; }
+  .herojus__foto::after { background: linear-gradient(0deg, var(--juoda) 0%, rgba(26,26,26,0) 40%); }
+  .herojus__tekstas { padding: 1.5rem var(--tarpas) 2.75rem; }
+  .herojus h1 { font-size: 1.9rem; }
+  .herojus p { font-size: 1.1rem; }
+  .mygtukai { margin-top: 1.5rem; }
+  .mygtukai .mygt { flex: 1 1 100%; }
+
+  .pasl-tinklas { grid-template-columns: 1fr; }
+  .pasl--didelis { grid-row: auto; }
+  .pasl:not(.pasl--didelis), .pasl__tekstas { padding: 1.5rem; }
+
+  .galerija { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; gap: .75rem; }
+  .g--platus { grid-column: span 2; grid-row: span 2; }
+  .g figcaption { font-size: .9rem; }
+
+  .salys { grid-template-columns: 1fr 1fr; }
+  .salys li { padding: 1rem 0; }
+  .salys li + li { padding-left: 0; border-left: 0; }
+  .salys li:nth-child(even) { padding-left: 1rem; border-left: 1px solid var(--linija); }
+  .salys li:nth-child(n+3) { border-top: 1px solid var(--linija); }
+  .kur__apacia { grid-template-columns: 1fr; gap: 2rem; }
+
+  .apie__tinklas { grid-template-columns: 1fr; }
+  .apie__tinklas--be-foto .apie__tekstas { grid-template-columns: 1fr; }
+  .apie__tinklas--be-foto p:first-of-type { grid-row: auto; }
+
+  .roles { grid-template-columns: 1fr; }
+  .role, .role + .role { padding: 1.5rem 0; border-left: 0; }
+  .role + .role { border-top: 1px solid var(--linija); }
+  .darbas__apacia { grid-template-columns: 1fr; }
+  .siulome__sarasas { grid-template-columns: 1fr; }
+  .siulome__sarasas li:first-child, .siulome__sarasas li:last-child { grid-column: auto; }
+
+  .forma__eile { grid-template-columns: 1fr; }
+  .forma .mygt { justify-self: stretch; }
+
+  .kontaktai { grid-template-columns: 1fr; }
+  .kontaktai__vaizdas { min-height: 0; aspect-ratio: 4 / 3; }
+  .apacia { flex-direction: column; }
+}

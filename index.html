@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAB „Leostat“ · Vamzdynai, suvirinimas ir montavimas</title>
+<meta name="description" content="UAB „Leostat“ nuo 2022 m. dirba subrangovu statybos įmonėms Lietuvoje, Švedijoje, Norvegijoje ir Suomijoje: vamzdynų gamyba, montavimas, suvirinimas.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preload" as="image" href="img/vilma-cechas.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="juosta">
+  <div class="juosta__vidus">
+    <a href="#pradzia" class="juosta__logo" aria-label="UAB „Leostat“, į pradžią">
+      <img src="img/logo.png" alt="UAB „Leostat“ logotipas" width="300" height="247">
+    </a>
+    <span class="juosta__linija" aria-hidden="true"></span>
+    <span class="juosta__veikla" data-i18n="veikla">Vamzdynų sistemos</span>
+
+    <nav class="meniu" id="meniu" aria-label="Pagrindinis meniu">
+      <a href="#paslaugos" data-i18n="nav.paslaugos">Paslaugos</a>
+      <a href="#darbai" data-i18n="nav.darbai">Darbai</a>
+      <a href="#apie" data-i18n="nav.apie">Apie mus</a>
+      <a href="#darbas" data-i18n="nav.darbas">Darbas pas mus</a>
+      <a href="#kontaktai" data-i18n="nav.kontaktai">Kontaktai</a>
+    </nav>
+
+    <div class="kalba" role="group" aria-label="Kalba / Language">
+      <button type="button" data-kalba="lt" aria-pressed="true">LT</button>
+      <button type="button" data-kalba="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="meniu-mygtukas" aria-expanded="false" aria-controls="meniu">
+      <span class="sr" data-i18n="nav.atidaryti">Meniu</span>
+      <span class="meniu-mygtukas__bruksnys"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. Pirmas ekranas -->
+  <section class="herojus" id="pradzia">
+    <div class="herojus__tekstas">
+      <h1 data-i18n="hero.h1">Vamzdynai, suvirinimas ir montavimas Lietuvoje ir Skandinavijoje</h1>
+      <p data-i18n="hero.p">UAB „Leostat“ nuo 2022 m. dirba subrangovu statybos įmonėms. Pasakykite, kokio darbo reikia, ir atsiųsime pasiūlymą.</p>
+      <div class="mygtukai">
+        <a href="#kontaktai" class="mygt mygt--geltonas" data-i18n="cta.pasiulymas">Prašyti pasiūlymo</a>
+        <a href="#darbas" class="mygt mygt--konturas" data-i18n="cta.darbas">Darbas pas mus</a>
+      </div>
+    </div>
+    <figure class="herojus__foto">
+      <img src="img/vilma-cechas.jpg" alt="Vilma, UAB „Leostat“ direktorė, su baltu šalmu gamybos ceche" width="1126" height="1397" fetchpriority="high">
+    </figure>
+  </section>
+
+  <!-- 2. Paslaugos -->
+  <section class="paslaugos sekcija" id="paslaugos">
+    <div class="remas">
+      <h2 class="rodyti" data-i18n="pasl.h2">Ką darome</h2>
+      <p class="ivadas rodyti" data-i18n="pasl.p">Dirbame ir kaip rangovas, ir kaip subrangovas, tad galime perimti darbus visame objekte arba įsijungti į jau vykstantį darbą.</p>
+
+      <div class="pasl-tinklas">
+        <article class="pasl pasl--didelis rodyti">
+          <video class="pasl__video" src="video/orbita.mp4" poster="img/orbita-poster.jpg" width="720" height="574" muted loop playsinline preload="metadata" aria-label="Leostat paslaugos sukasi aplink logotipą"></video>
+          <div class="pasl__tekstas">
+            <h3 data-i18n="pasl.g1">Vamzdynai</h3>
+            <ul>
+              <li data-i18n="pasl.gamyba">Vamzdynų gamyba</li>
+              <li data-i18n="pasl.montavimas">Montavimas</li>
+              <li data-i18n="pasl.laivai">Vamzdynai laivų statyboje</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pasl pasl--tamsus rodyti">
+          <h3 data-i18n="pasl.g2">Suvirinimas ir metalas</h3>
+          <ul>
+            <li data-i18n="pasl.suvirinimas">Suvirinimas</li>
+            <li data-i18n="pasl.metalas">Metalo apdirbimas</li>
+          </ul>
+        </article>
+        <article class="pasl pasl--smelis rodyti">
+          <h3 data-i18n="pasl.g3">Vanduo ir priešgaisrinė sauga</h3>
+          <ul>
+            <li data-i18n="pasl.vanduo">Vandentiekis</li>
+            <li data-i18n="pasl.sprinkleriai">Priešgaisrinių (sprinklerių) sistemų montavimas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Darbai -->
+  <section class="darbai sekcija" id="darbai">
+    <div class="remas">
+      <h2 class="rodyti" data-i18n="darbai.h2">Mūsų darbai</h2>
+      <div class="skirtukai" role="tablist" aria-label="Darbų kategorijos">
+        <button type="button" role="tab" aria-selected="true" aria-controls="gal-laivai" id="tab-laivai" data-i18n="darbai.laivai">Laivų statyba</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="gal-pramone" id="tab-pramone" tabindex="-1" data-i18n="darbai.pramone">Pramonės objektai</button>
+      </div>
+
+      <div class="galerija" id="gal-laivai" role="tabpanel" aria-labelledby="tab-laivai">
+        <figure class="g g--platus"><button type="button" class="g__btn"><img src="img/laivai-komanda.jpg" alt="" loading="lazy" width="1600" height="900"></button><figcaption data-i18n="f.komanda">Mašinų skyrius, komanda montuoja vamzdynus</figcaption></figure>
+        <figure class="g g--aukstas"><button type="button" class="g__btn"><img src="img/laivai-sklende.jpg" alt="" loading="lazy" width="900" height="1600"></button><figcaption data-i18n="f.sklende">Vertikalus mazgas su sklende</figcaption></figure>
+        <figure class="g g--aukstas"><button type="button" class="g__btn"><img src="img/laivai-filtrai.jpg" alt="" loading="lazy" width="1067" height="1600"></button><figcaption data-i18n="f.filtrai">Filtrai laivo skyriuje</figcaption></figure>
+        <figure class="g"><button type="button" class="g__btn"><img src="img/laivai-mazgas.jpg" alt="" loading="lazy" width="1600" height="900"></button><figcaption data-i18n="f.mazgas">Vamzdynų mazgas su vožtuvais</figcaption></figure>
+        <figure class="g g--aukstas"><button type="button" class="g__btn"><img src="img/laivai-nerudijantis.jpg" alt="" loading="lazy" width="1600" height="900"></button><figcaption data-i18n="f.nerudijantis">Nerūdijančio plieno vamzdynai su sklendėmis</figcaption></figure>
+        <figure class="g"><button type="button" class="g__btn"><img src="img/laivai-izoliuoti.jpg" alt="" loading="lazy" width="1600" height="900"></button><figcaption data-i18n="f.izoliuoti">Izoliuoti vamzdžiai ir vožtuvai</figcaption></figure>
+      </div>
+
+      <div class="galerija" id="gal-pramone" role="tabpanel" aria-labelledby="tab-pramone" hidden>
+        <figure class="g g--platus"><button type="button" class="g__btn"><img src="img/pramone-transportas.jpg" alt="" loading="lazy" width="1413" height="1390"></button><figcaption data-i18n="f.transportas">Vamzdynų modulis paruoštas vežti į objektą</figcaption></figure>
+        <figure class="g g--aukstas"><button type="button" class="g__btn"><img src="img/pramone-izoliuoti.jpg" alt="" loading="lazy" width="1194" height="1600"></button><figcaption data-i18n="f.pizoliuoti">Izoliuoti vamzdynai pramonės objekte</figcaption></figure>
+        <figure class="g g--aukstas"><button type="button" class="g__btn"><img src="img/pramone-vamzdynai.jpg" alt="" loading="lazy" width="1194" height="1600"></button><figcaption data-i18n="f.pvamzdynai">Vamzdynai metaliniame rėme</figcaption></figure>
+        <figure class="g g--platus"><button type="button" class="g__btn"><img src="img/pramone-modulis.jpg" alt="" loading="lazy" width="1440" height="1284"></button><figcaption data-i18n="f.modulis">Didelis vamzdžių modulis prie pastato</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ir 5. Kur dirbome, kvalifikacija -->
+  <section class="kur sekcija" id="kur">
+    <div class="remas">
+      <h2 class="rodyti" data-i18n="kur.h2">Kur dirbome</h2>
+      <ul class="salys rodyti">
+        <li data-i18n="salis.lt">Lietuva</li>
+        <li data-i18n="salis.se">Švedija</li>
+        <li data-i18n="salis.no">Norvegija</li>
+        <li data-i18n="salis.fi">Suomija</li>
+      </ul>
+      <div class="kur__apacia">
+        <dl class="faktai rodyti">
+          <div><dt data-i18n="kur.objektai">Objektai</dt><dd data-i18n="kur.objektai.v">Laivų statyba ir pramonės objektai</dd></div>
+          <div><dt data-i18n="kur.partneris">Partneris ir užsakovas</dt><dd>UAB „Kijora“</dd></div>
+          <div><dt data-i18n="kur.nuo">Veikiame nuo</dt><dd data-i18n="kur.nuo.v">2022 m. balandžio, Klaipėda</dd></div>
+        </dl>
+        <p class="pastaba rodyti" data-i18n="kvalif">Mūsų darbuotojai kvalifikuoti ir dirba su visais reikalingais dokumentais: ID06, SSG ir kitais, kurių reikia pagal šalį ir objektą.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Apie vadovę -->
+  <section class="apie sekcija" id="apie">
+    <div class="remas apie__tinklas apie__tinklas--be-foto">
+      <div class="apie__tekstas rodyti">
+        <h2 data-i18n="apie.h2">Vilma, direktorė</h2>
+        <p data-i18n="apie.p1">Vadovauju vamzdynų sistemų gamybos ir montavimo įmonei. Dirbame Lietuvoje, Švedijoje, Norvegijoje ir Suomijoje.</p>
+        <p data-i18n="apie.p2">Mano darbas yra ta įmonės dalis, kurios statybvietėje nesimato, bet be kurios ji nejuda: sutartys, dokumentai, darbuotojų reikalai ir ryšys su užsakovais bei institucijomis.</p>
+        <p data-i18n="apie.p3">Kadangi dirbame dviejose teisinėse sistemose, dokumentai turi būti tvarkingi ir lietuviškai, ir švediškai. Tuo rūpinuosi pati.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6a. Darbų vadovas -->
+  <section class="apie apie--vadovas sekcija" id="vadovas">
+    <div class="remas apie__tinklas">
+      <figure class="apie__foto rodyti">
+        <img src="img/darbu-vadovas.jpg" alt="Osvaldas, UAB „Leostat“ darbų vadovas" width="1000" height="1339" loading="lazy">
+      </figure>
+      <div class="apie__tekstas rodyti">
+        <h2 data-i18n="vadovas.h2">Osvaldas, darbų vadovas</h2>
+        <p data-i18n="vadovas.p1">20 metų patirtis vamzdynų srityje.</p>
+        <p data-i18n="vadovas.p2">Atsakingas už darbus objektuose: komandą, darbų eigą ir kokybę.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Darbas pas mus -->
+  <section class="darbas sekcija" id="darbas">
+    <div class="remas">
+      <h2 class="rodyti" data-i18n="darbas.h2">Darbas pas mus</h2>
+      <p class="ivadas rodyti" data-i18n="darbas.p">Ieškome suvirintojų, vamzdininkų ir sprinklerių montuotojų darbui Lietuvoje ir Skandinavijoje.</p>
+
+      <div class="roles">
+        <article class="role rodyti">
+          <h3 data-i18n="r1.h">Suvirintojas</h3>
+          <ul>
+            <li data-i18n="r1.a">Moka virinti TIG būdu.</li>
+            <li data-i18n="r1.b">Darbo patirtis nuo 1 metų.</li>
+            <li data-i18n="r1.c">Suvirinimo sertifikatai. Jei jų neturi, užsakysime mes.</li>
+          </ul>
+        </article>
+        <article class="role rodyti">
+          <h3 data-i18n="r2.h">Vamzdininkas</h3>
+          <ul>
+            <li data-i18n="r2.a">Moka skaityti izometrinius ir statybinius brėžinius.</li>
+            <li data-i18n="r2.b">Turi patirties montuojant ir gaminant įvairių tipų vamzdynus.</li>
+            <li data-i18n="r2.c">Darbo patirtis nuo 1 metų.</li>
+          </ul>
+        </article>
+        <article class="role rodyti">
+          <h3 data-i18n="r3.h">Sprinklerių (priešgaisrinių sistemų) montuotojas</h3>
+          <ul>
+            <li data-i18n="r3.a">Darbo patirtis nuo 1 metų.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="darbas__apacia">
+        <div class="siulome rodyti">
+          <h3 data-i18n="siul.h">Ką siūlome</h3>
+          <ul class="siulome__sarasas">
+            <li><strong data-i18n="siul.1a">6 + 2</strong><span data-i18n="siul.1">Darbas rotacija: 6 savaitės darbo, 2 savaitės laisva.</span></li>
+            <li><span data-i18n="siul.2">Apgyvendinimas, transportas ir kelionės išlaidos mūsų sąskaita.</span></li>
+            <li><span data-i18n="siul.3">Darbo drabužiai ir darbo įrankiai.</span></li>
+            <li><span data-i18n="siul.4">Visus reikalingus dokumentus ir korteles (ID06, SSG ir kt.) užsakome mes.</span></li>
+            <li><span data-i18n="siul.5">Kvalifikacijos kėlimas.</span></li>
+            <li><span data-i18n="siul.6">Geras darbo rezultatas reiškia didesnę algą.</span></li>
+          </ul>
+        </div>
+
+        <form class="forma forma--sviesi rodyti" id="anketa" novalidate>
+          <h3 data-i18n="anketa.h">Anketa</h3>
+          <div class="laukas">
+            <label for="a-vardas" data-i18n="l.vardas">Vardas ir pavardė</label>
+            <input id="a-vardas" name="vardas" autocomplete="name" required>
+            <p class="klaida" data-klaida></p>
+          </div>
+          <div class="laukas">
+            <label for="a-spec" data-i18n="l.spec">Specialybė</label>
+            <select id="a-spec" name="specialybe" required>
+              <option value="" data-i18n="l.pasirink">Pasirinkite</option>
+              <option data-i18n="r1.h">Suvirintojas</option>
+              <option data-i18n="r2.h">Vamzdininkas</option>
+              <option data-i18n="r3.trumpas">Sprinklerių montuotojas</option>
+            </select>
+            <p class="klaida" data-klaida></p>
+          </div>
+          <div class="laukas">
+            <label for="a-patirtis" data-i18n="l.patirtis">Darbo patirtis</label>
+            <input id="a-patirtis" name="patirtis" required>
+            <p class="pagalba" data-i18n="l.patirtis.p">Pvz., kiek metų ir kokiuose objektuose dirbote.</p>
+            <p class="klaida" data-klaida></p>
+          </div>
+          <div class="laukas">
+            <label for="a-sert" data-i18n="l.sert">Kokius sertifikatus ir korteles jau turite</label>
+            <textarea id="a-sert" name="sertifikatai" rows="3"></textarea>
+            <p class="pagalba" data-i18n="l.sert.p">Pvz., TIG sertifikatas, ID06, SSG. Jei neturite, taip ir parašykite.</p>
+          </div>
+          <div class="laukas">
+            <label for="a-pastas" data-i18n="l.pastas">El. paštas</label>
+            <input id="a-pastas" name="el_pastas" type="email" autocomplete="email" required>
+            <p class="klaida" data-klaida></p>
+          </div>
+          <button type="submit" class="mygt mygt--juodas" data-i18n="anketa.siusti">Siųsti anketą</button>
+          <p class="forma__busena" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Kontaktai -->
+  <section class="kontaktai" id="kontaktai">
+    <div class="kontaktai__vaizdas" aria-hidden="true">
+      <video src="video/leostat-3d.mp4" poster="img/leostat-3d-poster.jpg" muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="kontaktai__turinys">
+      <h2 data-i18n="kont.h2">Prašyti pasiūlymo</h2>
+      <p class="kontaktai__ivadas" data-i18n="kont.p">Parašykite, kokio darbo reikia, kur ir kada. Atsiųsime pasiūlymą.</p>
+
+      <form class="forma forma--tamsi" id="uzklausa" novalidate>
+        <div class="forma__eile">
+          <div class="laukas">
+            <label for="u-vardas" data-i18n="l.vardas2">Vardas</label>
+            <input id="u-vardas" name="vardas" autocomplete="name" required>
+            <p class="klaida" data-klaida></p>
+          </div>
+          <div class="laukas">
+            <label for="u-imone" data-i18n="l.imone">Įmonė</label>
+            <input id="u-imone" name="imone" autocomplete="organization">
+          </div>
+        </div>
+        <div class="laukas">
+          <label for="u-pastas" data-i18n="l.pastas">El. paštas</label>
+          <input id="u-pastas" name="el_pastas" type="email" autocomplete="email" required>
+          <p class="klaida" data-klaida></p>
+        </div>
+        <div class="laukas">
+          <label for="u-darbas" data-i18n="l.darbas">Kokio darbo reikia</label>
+          <textarea id="u-darbas" name="darbas" rows="4" required></textarea>
+          <p class="pagalba" data-i18n="l.darbas.p">Darbų rūšis, šalis ir objektas, apytikslė pradžia.</p>
+          <p class="klaida" data-klaida></p>
+        </div>
+        <button type="submit" class="mygt mygt--geltonas" data-i18n="kont.siusti">Siųsti užklausą</button>
+        <p class="forma__busena" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="kontaktai__kiti">
+        <a href="mailto:uableostat@gmail.com">uableostat@gmail.com</a>
+        <a href="https://www.instagram.com/uab_leostat/" target="_blank" rel="noopener">Instagram @uab_leostat</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="apacia">
+  <p>UAB „Leostat“ · <span data-i18n="ik">įm. k.</span> 306068370 · Klaipėda</p>
+  <p><a href="mailto:uableostat@gmail.com">uableostat@gmail.com</a></p>
+</footer>
+
+<dialog class="perziura" id="perziura" aria-label="Nuotraukos peržiūra">
+  <button type="button" class="perziura__uzdaryti" data-i18n="uzdaryti">Uždaryti</button>
+  <img src="" alt="">
+  <p class="perziura__aprasas"></p>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
